@@ -1,7 +1,6 @@
 #include "../../minishell.h"
 
-void parssing ()
+int parssing (char *string)
 {
-
-    
+    return 1;
 }

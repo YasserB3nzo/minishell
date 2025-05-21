@@ -6,5 +6,12 @@ int main()
 
     command_line = readline("minishell >");
     
+    if( parssing(command_line) )
+    {
+        printf("gooooooooood");
+    }
+    else
+        printf("bbbbbbbbbbbbad");
+
     return 0;
 }

@@ -2,7 +2,7 @@ CC      = cc
 #CFLAGS  = -Wall -Wextra -Werror
 LDFLAGS = -lreadline
 
-SRCS    = src/main.c
+SRCS    = src/main.c src/parssing/parssing.c
 OBJS    = $(SRCS:.c=.o)
 
 NAME    = minishell
