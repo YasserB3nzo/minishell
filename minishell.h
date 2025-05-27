@@ -15,9 +15,16 @@
 # include <termios.h>
 # include <curses.h>
 # include <term.h>
+#include "./Libft/libft.h"
+#include "./printf/ft_printf.h"
 
 
 # include <readline/readline.h>
 # include <readline/history.h>
+
+
+int parssing(char *string);
+int ft_echo(char *string);
+
 
 #endif
