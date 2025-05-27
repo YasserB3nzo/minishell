@@ -3,15 +3,20 @@
 int main()
 {
     char *command_line;
-
     command_line = readline("minishell >");
-    
-    if( parssing(command_line) )
+ 
+    while(1)
     {
-        printf("gooooooooood");
-    }
-    else
-        printf("bbbbbbbbbbbbad");
+            if(parssing(command_line) == 1)
+            {
+                return 1;
+            }
+            else 
+            {
+                write(1,"khata2",6);
+                return 0;
+            }
 
+    }
     return 0;
 }
