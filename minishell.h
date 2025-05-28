@@ -24,7 +24,9 @@
 
 
 int parssing(char *string);
-int ft_echo(char *string);
+int ft_echo(char **string , int flag);
+int ft_cd(char  *PATH);
+void free_array(char **array);
 
 
 #endif
