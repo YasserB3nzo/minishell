@@ -1,7 +1,13 @@
 #include "../../minishell.h"
 
-void execution ()
+void pwd ()
 {
 
     
 }
+void exit 
+
+echo ()
+{
+    return ;
+} 
