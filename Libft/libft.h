@@ -17,6 +17,7 @@
 # include <stdint.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <limits.h>
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 1024
@@ -28,6 +29,7 @@ typedef struct s_list
 	int				index;
 	struct s_list	*next;
 }					t_list;
+int	ft_atoi(const char *str);
 void				ft_lstadd_front(t_list **lst, t_list *new);
 int					ft_lstsize(t_list *lst);
 char				*ft_substr(char const *s, unsigned int start, size_t len);

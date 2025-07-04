@@ -11,7 +11,7 @@ SRCS = ft_isdigit.c ft_memcpy.c ft_bzero.c ft_strdup.c \
         ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c \
         ft_putnbr_fd.c ft_lstadd_back_bonus.c ft_lstclear_bonus.c \
 		ft_lstnew_bonus.c ft_lstsize_bonus.c ft_lstadd_front.c \
-		get_next_line.c
+		get_next_line.c ft_atoi.c
 OBJS = $(SRCS:.c=.o)
 
 NAME = libft.a
