@@ -34,22 +34,6 @@ void	sigint_handler(int signo)
 	rl_replace_line("", 0);
 	rl_redisplay();
 }
-
-void	signal_print_newline(int signal)
-{
-	(void)signal;
-	rl_on_new_line();
-}
-//this handles the state of non intereactive shell
-void	set_signals_noninteractive(void)
-{
-	struct sigaction	act;
-
-	ft_memset(&act, 0, sizeof(act));
-	act.sa_handler = &signal_print_newline;
-	sigaction(SIGINT, &act, NULL);
-	sigaction(SIGQUIT, &act, NULL);
-}
 //test: ctrl + \ .
 void	ignore_sigquit(void)
 {
@@ -73,9 +57,12 @@ int	main(void)
 	while (1)
 	{
 		command_line = readline("minishell >");
+		if (!command_line)
+			return (1);
 		parssing(command_line);
 		if (*command_line)
 			add_history(command_line);
+		free(command_line);
 	}
 	return (0);
 }
