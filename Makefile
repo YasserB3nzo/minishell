@@ -9,7 +9,8 @@ LIB_NAME = libftprintf.a
 LIBFT_NAME = Libft.a
 
 
-SRCS    = src/main.c src/parssing/parssing.c src/execution/exacution.c
+SRCS    = src/main.c src/parssing/parssing.c src/execution/exacution.c \
+		   src/execution/exit.c src/execution/pwd.c src/ft_atoi.c
 OBJS    = $(SRCS:.c=.o)
 
 NAME    = minishell

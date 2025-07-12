@@ -36,6 +36,14 @@ int parssing(char *string) {
             free_array(array);
             return 1;
         }
+    } else if (ft_strncmp(array[0], "exit", ft_strlen("exit")) == 0) {
+        exits(array);
+        free_array(array);
+        return 1;
+    } else if (ft_strncmp(array[0], "pwd", ft_strlen("pwd")) == 0) {
+        pwd(array);
+        free_array(array);
+        return 1;
     } else {
         free_array(array);
         return 0;
