@@ -18,6 +18,7 @@ int parssing(char *string) {
         // perror("ft_split failed");
         return 1;
     }
+	
 
     if (ft_strncmp(array[0], "echo", ft_strlen("echo")) == 0) {
         if (array[1] != NULL && ft_strncmp(array[1], "-n", 2) == 0) {
