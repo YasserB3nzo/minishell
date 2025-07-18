@@ -45,6 +45,11 @@ int parssing(char *string) {
         pwd(array);
         free_array(array);
         return 1;
+    } else if (ft_strncmp(array[0], "ls", ft_strlen("ls")) == 0) {
+        if (ft_ls(array) == 1) {
+            free_array(array);
+            return 1;
+        }
     } else {
         free_array(array);
         return 0;

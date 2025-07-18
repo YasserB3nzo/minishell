@@ -31,6 +31,7 @@ int ft_cd(char  *PATH);
 void exits(char **comands);
 void	pwd(char **args);
 void free_array(char **array);
+int ft_ls(char **args);
 
 
 #endif
