@@ -2,10 +2,8 @@ CC      = cc
 #CFLAGS  = -Wall -Wextra -Werror
 LDFLAGS = -lreadline
 
-LIB_PATH = ./printf
 LIBFT_PATH = ./Libft
 
-LIB_NAME = libftprintf.a
 LIBFT_NAME = Libft.a
 
 
@@ -18,7 +16,7 @@ NAME    = minishell
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(LDFLAGS) -L$(LIB_PATH) -lftprintf -L$(LIBFT_PATH) -lft
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(LDFLAGS) -L$(LIBFT_PATH) -lft
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@

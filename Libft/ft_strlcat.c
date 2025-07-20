@@ -6,11 +6,12 @@
 /*   By: ybenzidi <ybenzidi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 13:56:43 by ylahssin          #+#    #+#             */
-/*   Updated: 2025/04/12 21:20:05 by ybenzidi         ###   ########.fr       */
+/*   Updated: 2025/07/19 13:48:52 by ybenzidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {

@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   exacution.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ybenzidi <ybenzidi@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/07/19 13:57:11 by ybenzidi          #+#    #+#             */
+/*   Updated: 2025/07/19 13:57:11 by ybenzidi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
+
 #include "../../minishell.h"
-
-
 int ft_echo(char **string, int flag) {
     int i = 1;
     int nl = 1;
@@ -58,13 +70,20 @@ int ft_cd(char *path)
     return 0;
 }
 
-int ft_ls(char **args)
+int exec(char **args, char *command)
 {
     pid_t pid;
-    char *ls_path = "/bin/ls"; // Path to the ls executable
+    char *path = "/bin/"; // Path to the ls executable
+    char *executable;
 
     // Fork the process
     pid = fork();
+        executable = ft_strjoin(path, command);
+    if (executable == NULL) 
+    {
+        write(2, "Error: Memory allocation failed\n", 33);
+        return 1;
+    }
     if (pid < 0)
     {
         write(2, "Error: Fork failed\n", 19);
@@ -73,7 +92,7 @@ int ft_ls(char **args)
     else if (pid == 0)
     {
         // Child process
-        if (execv(ls_path, args) == -1)
+        if (execv(executable, args) == -1)
         {
             write(2, "Error: execv failed\n", 21);
             exit(1);

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   parssing.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ybenzidi <ybenzidi@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/07/19 13:58:41 by ybenzidi          #+#    #+#             */
+/*   Updated: 2025/07/19 13:58:41 by ybenzidi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../minishell.h"
 
 // Helper function to free the array of strings
@@ -45,15 +57,16 @@ int parssing(char *string) {
         pwd(array);
         free_array(array);
         return 1;
-    } else if (ft_strncmp(array[0], "ls", ft_strlen("ls")) == 0) {
-        if (ft_ls(array) == 1) {
+    } else {
+        if (exec(array, array[0]) == 1) {
             free_array(array);
             return 1;
         }
-    } else {
-        free_array(array);
-        return 0;
     }
+    // } else {
+    //     free_array(array);
+    //     return 0;
+    // }
 
     free_array(array);
     return 1;

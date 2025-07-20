@@ -1,3 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   minishell.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ybenzidi <ybenzidi@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/07/19 13:59:06 by ybenzidi          #+#    #+#             */
+/*   Updated: 2025/07/19 13:59:06 by ybenzidi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
 #ifndef MINISHELL_H
 # define MINISHELL_H
 
@@ -31,7 +44,7 @@ int ft_cd(char  *PATH);
 void exits(char **comands);
 void	pwd(char **args);
 void free_array(char **array);
-int ft_ls(char **args);
+int exec(char **args, char *command);
 
 
 #endif
