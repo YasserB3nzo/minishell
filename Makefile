@@ -2,7 +2,13 @@ CC      = cc
 #CFLAGS  = -Wall -Wextra -Werror
 LDFLAGS = -lreadline
 
-SRCS    = src/main.c src/parssing/parssing.c
+LIBFT_PATH = ./Libft
+
+LIBFT_NAME = Libft.a
+
+
+SRCS    = src/main.c src/parssing/parssing.c src/execution/exacution.c \
+		   src/execution/exit.c src/execution/pwd.c src/ft_atoi.c
 OBJS    = $(SRCS:.c=.o)
 
 NAME    = minishell
@@ -10,7 +16,7 @@ NAME    = minishell
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(LDFLAGS)
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(LDFLAGS) -L$(LIBFT_PATH) -lft
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
@@ -24,3 +30,4 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re
+ #$(CC) -L$(LIB_PATH) -l$(LIB_NAME)
