@@ -36,6 +36,12 @@
 # include <readline/readline.h>
 # include <readline/history.h>
 
+typedef struct s_env {
+    char *name;
+    char *value;
+    struct s_env *next;
+} t_env;
+
 static int	check_overflow(int m);
 int	ft_atoi(const char *str);
 int parssing(char *string);
