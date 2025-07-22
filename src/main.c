@@ -48,7 +48,7 @@ void	ignore_sigquit(void)
 	}
 }
 
-int	main(void)
+int	main(int argc, char **argv, char **envp)
 {
 	char	*command_line;
 

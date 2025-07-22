@@ -41,6 +41,7 @@ typedef struct s_env {
     char *value;
     struct s_env *next;
 } t_env;
+extern t_env *g_env;
 
 static int	check_overflow(int m);
 int	ft_atoi(const char *str);
