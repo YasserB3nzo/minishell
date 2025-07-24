@@ -52,6 +52,7 @@ int	main(int argc, char **argv, char **envp)
 {
 	char	*command_line;
 
+	t_env* envt=lst_env_create(envp);
 	ignore_sigquit();
 	signal(SIGINT, sigint_handler);
 	while (1)
